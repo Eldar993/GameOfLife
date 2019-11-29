@@ -1,5 +1,6 @@
 package com.company;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 public class Main {
@@ -8,17 +9,13 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         int s = scanner.nextInt();
-        List list = new ArrayList<char[]>();
-        for (int i =1;i <= n;i++){
-            String str = scanner.nextLine();
-            char[] c = str.toCharArray();
+        List<char[]> list = new ArrayList<char[]>();
+        for (int i =0;i < n;i++){
+            char[] c = scanner.nextLine().toCharArray();
             list.add(c);
         }
-        for(int i = 0;i < list.size();i++){
-         System.out.println(list.get(i));
-         }
-
+        for(char[] a :  list) {
+            System.out.println(Arrays.toString(a));
+        }
     }
 }
-
-
