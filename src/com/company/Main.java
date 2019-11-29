@@ -1,6 +1,5 @@
 package com.company;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 public class Main {
@@ -10,12 +9,14 @@ public class Main {
         int n = scanner.nextInt();
         int s = scanner.nextInt();
         List<char[]> list = new ArrayList<char[]>();
-        for (int i =0;i < n;i++){
+        for (int i =0;i <= n;i++){
             char[] c = scanner.nextLine().toCharArray();
             list.add(c);
         }
-        for(char[] a :  list) {
-            System.out.println(Arrays.toString(a));
+        for(char[] c :  list) {
+            String stringFromChars = String.valueOf(c);
+            System.out.println(stringFromChars);
         }
     }
 }
+
