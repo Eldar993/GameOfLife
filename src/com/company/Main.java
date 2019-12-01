@@ -1,7 +1,3 @@
-package com.company;
-
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -20,13 +16,21 @@ public class Main {
                 {'_', '_', 'X', '_', '_', 'X', '_', '_'},
                 {'_', '_', '_', '_', '_', '_', '_', '_'}
         };
-        nextGeneration(grid, n);
+        for (int i = 1; i <= s; i++) {
+            nextGeneration(grid, n);
+        }
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.println(grid[i][j]);
+            }
+            System.out.println();
+        }
 
 
     }
 
     static void nextGeneration(char[][] grid, int n) {
-        int[][] future = new int[n][n];
+        char[][] future = new char[n][n];
 
         for (int l = 1; l < n - 1; l++) {
             for (int m = 1; m < n - 1; m++) {
@@ -50,15 +54,11 @@ public class Main {
                     }
                 }
             }
-                    for (int i = 0; i < n; i++) {
-                        for (int j = 0; j < n; j++) {
-                            System.out.println(grid[i][j]);
-                        }
-                        System.out.println();
-                    }
-                }
 
-            
 
+        }
     }
+
 }
+
+
